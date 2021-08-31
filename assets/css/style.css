@@ -1,0 +1,165 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+/* Especificidade -> O quanto mais específico você é, mais importante você se torna */
+/* Media queries */
+
+/* Dispositivos menores - Smartphones */
+/* Breakpoints - Pontos de quebra */
+/* 320px, 480px, 576px, 768px, 992px, 1200px */
+@media only screen and (min-width: 320px) {
+    header.top-site {
+        position: fixed;
+        width: 100%;
+        min-height: 80px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #menu-hotdog {
+        margin-right: 10%;
+    }
+    header.top-site #menu-site {
+        height: 100vh;
+        width: 95vw;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        display: none;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #menu-site ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30%;
+    }
+    #menu-site li {
+        text-align: center;
+        min-height: 50px;
+        font-size: 1.2em;
+    }
+    #menu-site a {
+        text-decoration: none;
+        color: #333;
+        font-family: sans-serif;
+    }
+    section.full-banner {
+        width: 100%;
+        height: 100vh;
+        background: url("../images/full-banner-375.png") no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .full-banner .destak {
+        width: 80%;
+        min-height: 375px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .destak .title-destak {
+        width: 90%;
+        border-top: 2px solid #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+    .title-destak h1,
+    .title-destak h2 {
+        margin: 0;
+    }
+    .title-destak h2 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .title-destak span {
+        font-size: 2em;
+    }
+    .title-destak h1 {
+        font-size: 2.6em;
+        text-transform: uppercase;
+    }
+    .show-mobile {
+        display: block;
+    }
+    .show-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 411px) {
+    section.full-banner {
+        background: url("../images/full-banner-411.png") no-repeat;
+    }
+}
+
+/* Telas médias */
+@media only screen and (min-width: 768px) {
+    header.top-site {
+        justify-content: space-between;
+    }
+    #logo {
+        margin-left: 10%;
+    }
+    section.full-banner {
+        background: url("../images/full-banner-768.png") no-repeat;
+    }
+    .show-desktop {
+        display: block;
+    }
+}
+
+/* Telas maiores */
+@media only screen and (min-width: 1200px) {
+    header.top-site {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0)
+        );
+    }
+    header.top-site #menu-site {
+        height: 80px;
+        width: 100%;
+        background-color: unset;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 10%;
+    }
+    #menu-site ul {
+        flex-direction: row;
+        margin-top: unset;
+    }
+    #menu-site li {
+        min-width: 150px;
+        text-align: center;
+        min-height: unset;
+        font-size: unset;
+    }
+    #menu-site a {
+        color: #f4f4f4;
+    }
+    section.full-banner {
+        background: url("../images/full-banner.png") no-repeat;
+    }
+    .show-mobile {
+        display: none;
+    }
+}
