@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "Montserrat-regular";
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-light";
+    src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-bold";
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-medium";
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+    /* local() -> Trazer a fonte do próprio computador do usuário, se ele possui tal fonte */
+}
+
 /* Reset CSS */
 * {
     box-sizing: border-box;
@@ -23,6 +41,15 @@ html, body {
     }
     #menu-hotdog {
         margin-right: 10%;
+        width: 38px;
+        height: 38px;
+        background: url("../images/menu-hotdog.svg") no-repeat;
+        z-index: 3;
+        transition-duration: 0.5s;
+    }
+    body.open #menu-hotdog {
+        transform: rotate(720deg);
+        background: url("../images/close-icon.svg") no-repeat;        
     }
     header.top-site #menu-site {
         height: 100vh;
@@ -31,7 +58,14 @@ html, body {
         right: 0;
         top: 0;
         background-color: #fff;
-        display: none;
+        display: block;
+        transform: translateX(800px);
+        transition-duration: 0.5s;
+        opacity: 0;
+    }
+    body.open #menu-site {
+        transform: translateX(0);
+        opacity: 1;
     }
     ul {
         list-style: none;
@@ -51,7 +85,7 @@ html, body {
     #menu-site a {
         text-decoration: none;
         color: #333;
-        font-family: sans-serif;
+        font-family: "Montserrat-light";
     }
     section.full-banner {
         width: 100%;
@@ -85,15 +119,43 @@ html, body {
         margin: 0;
     }
     .title-destak h2 {
+        font-family: "Montserrat-medium";
         font-size: 1.2em;
-        text-align: center;
+        text-align: center;        
     }
     .title-destak span {
         font-size: 2em;
+        font-family: "Montserrat-light";
     }
     .title-destak h1 {
         font-size: 2.6em;
+        font-family: "Montserrat-regular";
         text-transform: uppercase;
+    }
+    .full-banner form,
+    .full-banner form label {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 25px 0 60px 0;
+    }
+    .full-banner .input-form-search {
+        width: 90%;
+        min-height: 45px;
+        border: none;
+        border-radius: 15px;
+        outline: 0;
+        margin-top: 4%;
+        padding-left: 7%;
+    }
+    .full-banner .input-form-search,
+    .full-banner .input-form-search::-webkit-input-placeholder {
+        font-family: "Montserrat-light";
+        font-size: 0.8em;
+    }
+    .full-banner .input-form-search::-webkit-input-placeholder {
+        color: #ccc;
     }
     .show-mobile {
         display: block;
@@ -120,8 +182,25 @@ html, body {
     section.full-banner {
         background: url("../images/full-banner-768.png") no-repeat;
     }
+    .full-banner .destak {
+        width: 90%;
+    }
+    .title-destak h2 {
+        font-size: 2em;
+    }
+    .title-destak span {
+        font-size: 2.5em;
+    }
+    .full-banner .input-form-search,
+    .full-banner .input-form-search::-webkit-input-placeholder {
+        font-size: 1em;
+        padding-top: 1%;
+    }
     .show-desktop {
         display: block;
+    }
+    .logo-mobile.show-mobile {
+        display: none;
     }
 }
 
@@ -142,6 +221,8 @@ html, body {
         align-items: center;
         justify-content: flex-end;
         margin-right: 10%;
+        transform: unset;
+        opacity: 1;
     }
     #menu-site ul {
         flex-direction: row;
@@ -158,6 +239,19 @@ html, body {
     }
     section.full-banner {
         background: url("../images/full-banner.png") no-repeat;
+    }
+    .full-banner .destak {
+        width: 80%;
+    }
+    .destak .title-destak {
+        width: 60%;
+    }
+    .title-destak h1 {
+        font-size: 5em;
+    }
+    .full-banner .input-form-search {
+        width: 85%;
+        min-height: 65px;
     }
     .show-mobile {
         display: none;
