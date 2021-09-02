@@ -163,11 +163,87 @@ html, body {
     .show-desktop {
         display: none;
     }
+
+    section.content {
+        height: 300px;
+    }
+
+    /********** COMEÇANDO O FOOTER ***********/
+
+    footer.footer-site {
+        width: 100%;
+        min-height: 200px;
+        background-color: #282828;
+        padding: 5%;
+        font-family: "Montserrat-light";
+    }
+
+    .footer-site .footer-links {
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .footer-links .link + .link {
+        margin-left: 10px;
+    }
+    .footer-links .link {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-site .copyright {
+        width: 100%;
+        height: 20px;
+        margin-top: 35px;
+    }
+    .footer-site .link a {
+        text-decoration: none;
+        color: #f4f4f4;
+        font-size: 0.8em;
+    }
+    .footer-site nav.link li + li {
+        margin-top: 5px;
+    }
+    .footer-site .link-address {
+        margin: 0;
+        color: #f4f4f4;
+        font-size: 0.7em;
+    }
+    .footer-site .link.social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .copyright > p.copyright-text {
+        font-size: 0.5em;
+        color: #fff;
+        margin: 0;
+        text-align: center;
+    }
+
+
+    /********** TERMINANDO O FOOTER ***********/
 }
 
 @media only screen and (min-width: 411px) {
     section.full-banner {
         background: url("../images/full-banner-411.png") no-repeat;
+    }
+
+    /* footer */
+    .copyright > p.copyright-text {
+        font-size: 0.6em;
+    }
+
+    .footer-site .link-address {
+        align-self: flex-start;
+        font-size: 1em;
+    }
+    .copyright > p.copyright-text {
+        font-size: 1em;
     }
 }
 
@@ -202,6 +278,12 @@ html, body {
     .logo-mobile.show-mobile {
         display: none;
     }
+
+    /* footer */
+    .footer-site nav.link a {
+        font-size: 1em;
+    }
+    
 }
 
 /* Telas maiores */
@@ -255,5 +337,10 @@ html, body {
     }
     .show-mobile {
         display: none;
+    }
+
+    /* footer */
+    .footer-site .link.social-media {
+        flex-direction: row;
     }
 }
