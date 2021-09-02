@@ -162,11 +162,7 @@ html, body {
     }
     .show-desktop {
         display: none;
-    }
-
-    section.content {
-        height: 300px;
-    }
+    }    
 
     /********** COMEÇANDO O FOOTER ***********/
 
@@ -226,6 +222,102 @@ html, body {
 
 
     /********** TERMINANDO O FOOTER ***********/
+
+    /********** COMEÇANDO O SLIDER *************/
+    .slider .title-slider {
+        font-family: "Montserrat-bold";
+        font-size: 1.2em;
+        margin-left: 5%;
+    }
+    .link-slider ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2%;
+    }
+    .link-slider li {
+        list-style: none;
+        min-width: 50px;
+        text-align: center;
+    }
+    .link-slider li > a {
+        text-decoration: none;
+        color: #aaa;
+        font-family: "Montserrat-regular";
+        font-size: 9px;
+        padding-bottom: 5px;
+    }
+    .carousel-container {
+        width: 100%;
+        overflow: hidden;
+        height: 500px;
+    }
+    .carousel-container .carousel-gallery {
+        width: 95%;
+        margin: 10px auto;
+        display: flex;
+    }
+    .carousel-gallery .card {
+        width: 250px;
+        height: 345px;
+        border: 1px solid #e4e4e4;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .carousel-gallery .card + .card {
+        margin-left: 30px;
+    }
+    .carousel-gallery .gallery-picture {
+        width: 218px;
+        height: 218px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        border: inherit;
+    }
+    .gallery-picture img {
+        height: 100%;
+    }
+    .gallery-picture .gallery-ellipse {
+        position: absolute;
+        width: 58px;
+        height: 58px;
+        border: none;
+        margin: 5%;
+        background-color: rgba(255, 255, 255, 0.8);
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .gallery-ellipse:active > svg > path,
+    .gallery-ellipse:hover > svg > path,
+    .gallery-ellipse:focus > svg > path,
+    .gallery-ellipse:visited > svg > path {
+        fill: red;
+    }
+    .card > h2 {
+        font-family: "Montserrat-bold";
+        margin: unset;
+        font-size: 1.1em;
+        width: 90%;
+        text-align: center;
+    }
+    .card .card-location {
+        display: flex;
+        height: 24px;
+    }
+    .card-location h3 {
+        font-family: "Montserrat-light";
+        color: #BCBCBC;
+        margin: unset;
+    }
+
+    /********** TERMINANDO O SLIDER *************/
 }
 
 @media only screen and (min-width: 411px) {
@@ -282,6 +374,17 @@ html, body {
     /* footer */
     .footer-site nav.link a {
         font-size: 1em;
+    }
+
+    /* slider */
+    .slider .title-slider {
+        font-size: 1.3em;
+    }
+    .link-slider li {
+        min-width: 100px;
+    }
+    .link-slider li > a {
+        font-size: 14px;
     }
     
 }
@@ -342,5 +445,28 @@ html, body {
     /* footer */
     .footer-site .link.social-media {
         flex-direction: row;
+    }
+
+    /* slider */
+    .link-slider li {
+        min-width: 150px;
+    }
+    .link-slider li > a {
+        font-size: 16px;
+    }
+    .carousel-gallery .card {
+        transition-duration: 0.5s;
+    }
+    .carousel-gallery .card:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transform-style: preserve-3d;
+    }
+    .carousel-gallery .card .gallery-picture img {
+        transition-duration: 0.5s;
+    }
+    .carousel-gallery .card:hover .gallery-picture img {
+        transform: scale(1.2);
+        transform-style: preserve-3d;
     }
 }
