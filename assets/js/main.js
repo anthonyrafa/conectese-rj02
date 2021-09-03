@@ -27,7 +27,8 @@ const database = [{
         meia: 60.00
     },
     description: "Debruçado sobre a Baía de Guanabara, esse morro é alcançado por teleférico e oferece magnífica vista.",
-    longitudeLatitude: "@-22.9557706,-43.2020016,13z"
+    longitudeLatitude: "@-22.9557706,-43.2020016,13z",
+    category: 3,
 }, {
     name: "Museu do Amanhã",
     site: "https://museudoamanha.org.br/",
@@ -41,7 +42,8 @@ const database = [{
         meia: 15.00
     },
     description: "Museu de ciências aplicadas que explora as oportunidades e os desafios que a humanidade terá de enfrentar nas próximas décadas a partir das perspectivas da sustentabilidade e da convivência.",
-    longitudeLatitude: "@-22.8943676,-43.1817211,17z"
+    longitudeLatitude: "@-22.8943676,-43.1817211,17z",
+    category: 1,
 }, {
     name: "Corcovado",
     site: "https://corcovado.com.br/",
@@ -55,7 +57,8 @@ const database = [{
         meia: 15.00
     },
     description: "O Corcovado é um dos morros da cidade do Rio de Janeiro, célebre no Brasil e no mundo pela sua estátua do Cristo Redentor de 38 metros de altura.",
-    longitudeLatitude: "@-22.8943676,-43.1817211,17z"
+    longitudeLatitude: "@-22.8943676,-43.1817211,17z",
+    category: 3,
 }, {
     name: "Praia de Copacabana",
     site: "https://praiacopacabana.com.br/",
@@ -69,7 +72,8 @@ const database = [{
         meia: 15.00
     },
     description: "Praia famosa de 3,5 km com extensa faixa de areia, calçadão movimentado, quiosques de comida e hotéis.",
-    longitudeLatitude: "@-22.8943676,-43.1817211,17z"
+    longitudeLatitude: "@-22.8943676,-43.1817211,17z",
+    category: 3
 }, {
     name: "Estádio do Maracanã",
     site: "https://estadiomaracana.com.br",
@@ -83,7 +87,8 @@ const database = [{
         meia: 15.00
     },
     description: "Estádio Jornalista Mário Filho, mais conhecido como Maracanã, ou carinhosamente como Maraca, é um estádio de futebol localizado na Zona Norte da cidade brasileira do Rio de Janeiro.",
-    longitudeLatitude: "@-22.8943676,-43.1817211,17z"
+    longitudeLatitude: "@-22.8943676,-43.1817211,17z",
+    category: 4,
 }, {
     name: "Parque Lage",
     site: "http://eavparquelage.rj.gov.br/",
@@ -97,7 +102,83 @@ const database = [{
         meia: 15.00
     },
     description: "O Parque Henrique Lage é um parque público da cidade do Rio de Janeiro, localizado aos pés do morro do Corcovado, na rua Jardim Botânico.",
-    longitudeLatitude: "@-22.8943676,-43.1817211,17z"
+    longitudeLatitude: "@-22.8943676,-43.1817211,17z",
+    category: 2,
+}, {
+    name: "Galeria Ipanema",
+    site: "https://galeria-ipanema.com/",
+    address: "R. Aníbal de Mendonça, 27 - Ipanema",
+    city: "Rio de Janeiro",
+    state: "RJ",
+    cep: "20081-240",
+    imageName: "galeria_ipanema.jpg",
+    ticket: {
+        inteira: 30.00,
+        meia: 15.00
+    },
+    description: "Desde o seu surgimento, há 55 anos, a Galeria de Arte Ipanema vem selando uma identidade própria no contexto da história da arte brasileira, ocupando assim um espaço de relevância fundamental para o despontar artístico no Brasil.",
+    longitudeLatitude: "@-22.8943676,-43.1817211,17z",
+    category: 2,
+}, {
+    name: "Parque das Ruínas",
+    site: "https://galeria-ipanema.com/",
+    address: "R. Murtinho Nobre, 169 - Santa Teresa",
+    city: "Rio de Janeiro",
+    state: "RJ",
+    cep: "20081-240",
+    imageName: "parque_das_ruinas.jpg",
+    ticket: {
+        inteira: 30.00,
+        meia: 15.00
+    },
+    description: "O Centro Cultural Municipal Parque das Ruínas é um parque público e centro cultural localizado no bairro de Santa Teresa, na cidade do Rio de Janeiro, no Brasil. Localiza-se nas ruínas do prédio que foi a casa da grande mecenas da Belle Époque carioca, Laurinda Santos Lobo.",
+    longitudeLatitude: "@-22.8943676,-43.1817211,17z",
+    category: 1,
+}, {
+    name: "Estádio Nilton Santos",
+    site: "https://galeria-ipanema.com/",
+    address: "R. José dos Reis, 425 - Engenho de Dentro",
+    city: "Rio de Janeiro",
+    state: "RJ",
+    cep: "20081-240",
+    imageName: "estadio_nilton_santos.jpg",
+    ticket: {
+        inteira: 30.00,
+        meia: 15.00
+    },
+    description: "O Estádio Olímpico Nilton Santos, antes denominado Estádio Olímpico João Havelange e popularmente conhecido como Engenhão, é um estádio poliesportivo localizado no antigo terreno da Rede Ferroviária.",
+    longitudeLatitude: "@-22.8943676,-43.1817211,17z",
+    category: 4,
+}, {
+    name: "Estádio das Laranjeiras",
+    site: "https://galeria-ipanema.com/",
+    address: "R. Pinheiro Machado, 86-126 - Laranjeiras",
+    city: "Rio de Janeiro",
+    state: "RJ",
+    cep: "20081-240",
+    imageName: "estadio_laranjeiras.jpeg",
+    ticket: {
+        inteira: 30.00,
+        meia: 15.00
+    },
+    description: "Estádio Manoel Schwartz é o estádio do Fluminense Football Club e fica situado no bairro de Laranjeiras, na Zona Sul da cidade do Rio de Janeiro, possuindo esse nome como homenagem ao ex-presidente do clube, Manoel Schwartz, que teve uma administração muito vitoriosa na Década de 1980.",
+    longitudeLatitude: "@-22.8943676,-43.1817211,17z",
+    category: 4
+}, {
+    name: "Feira de São Cristóvão",
+    site: "https://galeria-ipanema.com/",
+    address: "R. Campo de São Cristóvão - São Cristóvão",
+    city: "Rio de Janeiro",
+    state: "RJ",
+    cep: "20081-240",
+    imageName: "feira_sao_cristovao.jpg",
+    ticket: {
+        inteira: 30.00,
+        meia: 15.00
+    },
+    description: "O Centro Luiz Gonzaga de Tradições Nordestinas, também conhecido como Feira de São Cristóvão, é um pavilhão que promove a cultura e o comércio de produtos nordestinos. Localiza-se na cidade do Rio de Janeiro, no Brasil. Foi criado em homenagem a Luiz Gonzaga, o «Rei do Baião».",
+    longitudeLatitude: "@-22.8943676,-43.1817211,17z",
+    category: 5,
 }];
 
 function createBlock(galleryElement, location) {
@@ -133,9 +214,19 @@ function createBlock(galleryElement, location) {
 
     galleryElement.appendChild(card);
 
+    setTimeout(() => {
+        card.classList.add("show");
+    }, 200);    
+
 }
 
-function createGallery(database, galleryEl) {
+function createGallery(database, galleryEl, filter = 0) {
+
+    if (Number(filter) > 0) {        
+
+        database = database.filter((item) => Number(item.category) === Number(filter));
+
+    }
 
     database.forEach(location => {
 
@@ -206,9 +297,21 @@ linksGallery.forEach(linkElement => {
 
         event.preventDefault();
 
+        const container = linkElement.closest('.carousel-container');
+
+        const currentCarousel = container.querySelector(".carousel-gallery");
+
         removeActive(linksGallery);
 
         linkElement.classList.add("active");
+
+        $(currentCarousel).slick("unslick");
+        
+        currentCarousel.innerHTML = "";        
+
+        createGallery(database, currentCarousel, linkElement.dataset.category);
+
+        initSlick(currentCarousel.id);
 
     });
 
@@ -220,7 +323,7 @@ $(document).on("ready", function() {
 
         initSlick(element.id);
 
-    });    
+    });
 
 });
 
