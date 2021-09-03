@@ -246,13 +246,16 @@ html, body {
         font-size: 9px;
         padding-bottom: 5px;
     }
+    .link-slider li > a.active {
+        border-bottom: 3px solid red;
+    }
     .carousel-container {
         width: 100%;
         overflow: hidden;
         height: 500px;
     }
     .carousel-container .carousel-gallery {
-        width: 95%;
+        width: 85%;
         margin: 10px auto;
         display: flex;
     }
@@ -295,6 +298,7 @@ html, body {
         align-items: center;
     }
     .gallery-ellipse:active > svg > path,
+    .gallery-ellipse.active > svg > path,
     .gallery-ellipse:hover > svg > path,
     .gallery-ellipse:focus > svg > path,
     .gallery-ellipse:visited > svg > path {
@@ -315,6 +319,10 @@ html, body {
         font-family: "Montserrat-light";
         color: #BCBCBC;
         margin: unset;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        color: #7f7f7f;
     }
 
     /********** TERMINANDO O SLIDER *************/
@@ -386,6 +394,9 @@ html, body {
     .link-slider li > a {
         font-size: 14px;
     }
+    .carousel-container .carousel-gallery {
+        width: 90%;
+    }
     
 }
 
@@ -453,6 +464,9 @@ html, body {
     }
     .link-slider li > a {
         font-size: 16px;
+    }
+    .carousel-container .carousel-gallery {
+        width: 95%;
     }
     .carousel-gallery .card {
         transition-duration: 0.5s;
