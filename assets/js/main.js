@@ -327,6 +327,24 @@ $(document).on("ready", function() {
 
 });
 
+const randomNumber = () => {
+
+    return parseInt(Math.random() * (9 - 0) + 0);
+
+}
+
+const fullBanner = document.querySelector(".full-banner");
+
+const setBackground = () => {
+
+    fullBanner.style.background = `url("assets/images/backgrounds/${randomNumber()}.jpg") no-repeat`;
+
+}
+
+setBackground();
+
+setInterval(setBackground, 7000);
+
 /*
 INFORMAÇÕES SOBRE PONTOS TURÍSTICO
 
